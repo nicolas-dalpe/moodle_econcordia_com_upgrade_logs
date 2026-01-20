@@ -1,0 +1,12 @@
+
+=====================================
+commit c03ad2f40dd18c6f9800787afe5444b2f33f2c55
+Date: 2025-12-24
+Subject: MDL-87433 course: Add sorting to get_nearest_editable_subcategory
+
+Add ORDER BY to the query to ensure categories are returned in
+consistent order. This fixes random test failures, especially
+on PostgreSQL.
+
+
+course/classes/category.php

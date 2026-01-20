@@ -1,0 +1,27 @@
+Updating 9e2daa9d6c2..23ad73ee567
+Fast-forward
+ .github/workflows/onebyone.yml                     |   2 +-
+ MDL-87443-2025121117305654.yml                     |   7 ++
+ course/classes/category.php                        |   1 +
+ grade/tests/behat/grade_view.feature               |   9 +-
+ install/lang/uz/install.php                        |  33 +++++
+ lib/behat/classes/partial_named_selector.php       |   4 +
+ lib/db/upgradelib.php                              | 140 ++++++++++++---------
+ lib/templates/paging_bar.mustache                  |   2 +-
+ mod/glossary/showentry.php                         |   4 +
+ mod/glossary/tests/behat/showentry.feature         |  32 +++++
+ reportbuilder/tests/behat/audience.feature         |  26 ++--
+ reportbuilder/tests/behat/cardview.feature         |   4 +-
+ .../tests/behat/columnaggregationeditor.feature    |  14 +--
+ reportbuilder/tests/behat/columneditor.feature     |  10 +-
+ .../tests/behat/columnsortingeditor.feature        |  19 +--
+ reportbuilder/tests/behat/conditioneditor.feature  |  14 +--
+ reportbuilder/tests/behat/customreports.feature    |  11 +-
+ reportbuilder/tests/behat/filtereditor.feature     |  15 +--
+ reportbuilder/tests/behat/schedules.feature        |   8 +-
+ theme/boost/templates/navbar.mustache              |  10 +-
+ user/tests/behat/user_grade_navigation.feature     |  35 ++++--
+ version.php                                        |   4 +-
+ 22 files changed, 265 insertions(+), 139 deletions(-)
+ create mode 100644 MDL-87443-2025121117305654.yml
+ create mode 100644 mod/glossary/tests/behat/showentry.feature
