@@ -1,0 +1,19 @@
+
+=====================================
+commit c083984fd045215a38f5c9ac0188582a07b98257
+Date: 2025-12-04
+Subject: MDL-87094 core_course: Behat to restrict available activities/resources
+
+
+course/tests/behat/restrict_available_activities.feature
+
+=====================================
+commit dd9b7e8deb4a8cc99ae7ce9434ce25866a11d089
+Date: 2025-12-12
+Subject: MDL-87428 core_course: Fix RTL keyboard navigation
+
+Ensure consistent navigation experience across LTR and
+RTL interfaces in activity chooser.
+
+
+course/amd/src/local/activitychooser/dialogue.js

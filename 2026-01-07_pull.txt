@@ -1,0 +1,18 @@
+Updating b357491d00c..9e2daa9d6c2
+Fast-forward
+ .../build/local/activitychooser/dialogue.min.js    | Bin 13616 -> 13663 bytes
+ .../local/activitychooser/dialogue.min.js.map      | Bin 32701 -> 32039 bytes
+ course/amd/src/local/activitychooser/dialogue.js   | 102 ++++++++++-----------
+ .../behat/restrict_available_activities.feature    |  40 +++++---
+ enrol/database/db/upgrade.php                      |   8 +-
+ lang/en/moodle.php                                 |   1 +
+ lib/amd/build/paged_content_paging_bar.min.js      | Bin 8527 -> 8575 bytes
+ lib/amd/build/paged_content_paging_bar.min.js.map  | Bin 28171 -> 28330 bytes
+ lib/amd/src/paged_content_paging_bar.js            |   7 +-
+ lib/classes/navigation/output/more_menu.php        |   4 +
+ lib/tests/navigation/output/more_menu_test.php     |  46 ++++++++++
+ mod/quiz/tests/attempt_test.php                    |  47 +++++++---
+ user/view.php                                      |   1 +
+ version.php                                        |   4 +-
+ 14 files changed, 178 insertions(+), 82 deletions(-)
+ create mode 100644 lib/tests/navigation/output/more_menu_test.php
