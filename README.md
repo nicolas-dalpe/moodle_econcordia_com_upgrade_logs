@@ -1,5 +1,5 @@
 # Purpose
-This repository stores the Core Moodle upgrade logs as we merge them into develop. The purpose of this is to track changes coming from Moodle that could affect our custom plugins (peershare, course format, etc).
+This repository stores the Core Moodle upgrade logs as we merge them into develop. The purpose of this is to track changes coming from Moodle that could affect our custom plugins (peershare, course format, theme, etc).
 
 ## This script is logging:
  - **YYYY-MM-DD_baseline.txt**\
@@ -12,6 +12,8 @@ This repository stores the Core Moodle upgrade logs as we merge them into develo
    This file lists all the commits that affected files in the course/ directory.
  - **YYYY-MM-DD_moddata_commits.txt**\
    This file lists all the commits that affected files in the mod/data/ directory.
+ - **YYYY-MM-DD_themeboost_commits.txt**\
+   This file lists all the commits that affected files in the theme/boost/ directory.
 
 ## The script:
 - **moodle_upgrade_log.sh**
