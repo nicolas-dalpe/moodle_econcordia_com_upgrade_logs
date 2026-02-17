@@ -1,0 +1,104 @@
+Updating 23ad73ee567..5a1fb35680b
+Fast-forward
+ .github/workflows/push.yml                         |  41 ++---
+ UPGRADING.md                                       |  10 ++
+ admin/index.php                                    |  30 +++-
+ admin/renderer.php                                 |  47 +++++-
+ .../tests/behat/user_data_request.feature          | 100 +++++++++++
+ admin/tool/moodlenet/lang/en/tool_moodlenet.php    |   3 +
+ .../moodlenet/templates/chooser_moodlenet.mustache |  10 +-
+ .../tests/behat/suspend_user_enrolment.feature     |  41 +++++
+ auth/oauth2/classes/api.php                        |   8 +-
+ auth/oauth2/lang/en/auth_oauth2.php                |  23 +--
+ blocks/myoverview/templates/main.mustache          |   2 +-
+ blocks/myoverview/templates/zero-state.mustache    |   4 +-
+ .../tests/behat/block_myoverview_dashboard.feature |   4 +-
+ .../tests/behat/block_myoverview_zerostate.feature |   2 +-
+ composer.lock                                      |  12 +-
+ .../local/ltiadvantage/task/sync_tool_grades.php   |   1 +
+ filter/tex/latex.php                               |   2 +-
+ filter/tex/lib.php                                 | 183 ++++++++++++++++++++-
+ filter/tex/pix.php                                 |   3 +-
+ filter/tex/settings.php                            |   2 +-
+ filter/tex/texdebug.php                            |   6 +-
+ grade/report/overview/index.php                    |   4 +-
+ .../overview/tests/behat/view_grades.feature       |  30 ++++
+ grade/tests/behat/grade_aggregation.feature        |   6 +-
+ group/templates/comboboxsearch/resultitem.mustache |   6 +-
+ h5p/js/embed.js                                    |  44 +++++
+ install/lang/es_ve/admin.php                       |  41 +++++
+ install/lang/gd/error.php                          |  44 +++++
+ install/lang/hi/admin.php                          |   3 +
+ install/lang/hi/error.php                          |  50 ++++++
+ install/lang/hi/install.php                        | 101 ++++++++++++
+ install/lang/uz/error.php                          |   9 +-
+ install/lang/uz/install.php                        |  23 +--
+ lang/en/admin.php                                  |  11 +-
+ lang/en/auth.php                                   |  10 +-
+ lang/en/moodle.php                                 |  53 +++---
+ lib/UPGRADING.md                                   |   8 +
+ lib/adminlib.php                                   |   8 +-
+ lib/amd/build/edit_switch.min.js                   | Bin 1434 -> 1731 bytes
+ lib/amd/build/edit_switch.min.js.map               | Bin 4685 -> 5232 bytes
+ lib/amd/src/edit_switch.js                         |  17 +-
+ lib/classes/output/context_header.php              |   5 +-
+ lib/classes/output/core_renderer.php               |  36 ++--
+ lib/lti1p3/readme_moodle.txt                       |   1 +
+ lib/lti1p3/src/DeepLinkResources/Resource.php      |   2 +-
+ lib/tests/behat/behat_general.php                  |  72 +++++++-
+ lib/tests/fixtures/QA_user_enrol.txt               |   3 +
+ lib/tests/fixtures/QA_user_suspend.txt             |   3 +
+ lib/weblib.php                                     |   3 +-
+ .../moodle-core-notification-alert-debug.js        | Bin 4208 -> 4274 bytes
+ .../moodle-core-notification-alert-min.js          | Bin 1605 -> 1644 bytes
+ .../moodle-core-notification-alert.js              | Bin 4208 -> 4274 bytes
+ lib/yui/src/notification/js/alert.js               |   4 +-
+ .../tests/behat/assign_override_deadline.feature   |  98 +++++++++++
+ .../tests/behat/edit_student_submission.feature    |  52 ++++--
+ mod/feedback/amd/build/edit.min.js                 | Bin 3745 -> 3805 bytes
+ mod/feedback/amd/build/edit.min.js.map             | Bin 8230 -> 8230 bytes
+ mod/feedback/amd/src/edit.js                       |   9 +-
+ mod/forum/lang/en/forum.php                        |   1 +
+ mod/forum/renderer.php                             |   7 +-
+ mod/forum/templates/forum_discussion.mustache      |   2 -
+ .../tests/behat/recent_activity.feature            |  10 +-
+ .../tests/behat/sending_attempt.feature            |  12 +-
+ .../behat/import_fillintheblank_question.feature   |  38 -----
+ mod/lesson/tests/behat/import_images.feature       |  35 ----
+ mod/lesson/tests/behat/import_questions.feature    |  70 ++++++++
+ mod/lesson/tests/fixtures/moodle_questions.gift    |  19 +++
+ mod/lti/amd/build/contentitem.min.js               | Bin 4911 -> 4935 bytes
+ mod/lti/amd/build/contentitem.min.js.map           | Bin 15584 -> 15725 bytes
+ mod/lti/amd/build/mod_form.min.js                  | Bin 1332 -> 1350 bytes
+ mod/lti/amd/build/mod_form.min.js.map              | Bin 4085 -> 4181 bytes
+ mod/lti/amd/src/contentitem.js                     |   4 +-
+ mod/lti/amd/src/mod_form.js                        |   5 +-
+ mod/lti/mod_form.php                               |   8 +-
+ mod/lti/templates/contentitem.mustache             |   3 +-
+ mod/lti/view.php                                   |   8 +-
+ question/type/essay/tests/question_test.php        |  53 ++++++
+ repository/coursefiles/lib.php                     |   5 +-
+ repository/filepicker.js                           |  13 +-
+ repository/lib.php                                 |  19 ++-
+ theme/boost/scss/moodle/grade.scss                 |   8 +
+ theme/boost/style/moodle.css                       |   4 +
+ theme/classic/style/moodle.css                     |   4 +
+ user/profile.php                                   |  13 +-
+ user/tests/behat/user_grade_navigation.feature     |   2 +-
+ user/view.php                                      |  12 +-
+ version.php                                        |   4 +-
+ 87 files changed, 1348 insertions(+), 301 deletions(-)
+ create mode 100644 admin/tool/dataprivacy/tests/behat/user_data_request.feature
+ create mode 100644 admin/tool/uploaduser/tests/behat/suspend_user_enrolment.feature
+ create mode 100644 grade/report/overview/tests/behat/view_grades.feature
+ create mode 100644 install/lang/es_ve/admin.php
+ create mode 100644 install/lang/gd/error.php
+ create mode 100644 install/lang/hi/error.php
+ create mode 100644 install/lang/hi/install.php
+ create mode 100644 lib/tests/fixtures/QA_user_enrol.txt
+ create mode 100644 lib/tests/fixtures/QA_user_suspend.txt
+ create mode 100644 mod/assign/tests/behat/assign_override_deadline.feature
+ delete mode 100644 mod/lesson/tests/behat/import_fillintheblank_question.feature
+ delete mode 100644 mod/lesson/tests/behat/import_images.feature
+ create mode 100644 mod/lesson/tests/behat/import_questions.feature
+ create mode 100644 mod/lesson/tests/fixtures/moodle_questions.gift

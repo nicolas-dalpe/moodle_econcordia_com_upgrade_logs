@@ -1,0 +1,9 @@
+
+=====================================
+commit 5bff1a62b195be35aebef99254b897dfee9988eb
+Date: 2026-01-14
+Subject: MDL-86639 groups: Wrap group names in grade report group selector
+
+
+theme/boost/scss/moodle/grade.scss
+theme/boost/style/moodle.css
